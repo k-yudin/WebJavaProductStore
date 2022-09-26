@@ -38,7 +38,13 @@ public class CoreTest {
         );
     }
 
-    protected static void setUpBrowserConfiguration() { Configuration.browser = EnvironmentConfig.getBrowser(); }
+    protected static void setUpBrowserConfiguration() {
+        Configuration.browser = EnvironmentConfig.getBrowser();
+        Configuration.browserSize = "1920x1080";
+        if (EnvironmentConfig.getHost().equals("MOON_CLOUD")) {
+            Configuration.remote = EnvironmentConfig.getRemoteURL();
+        }
+    }
 
     private static void clearAllureResults() {
         File resultsFolder = new File("allure-results");
