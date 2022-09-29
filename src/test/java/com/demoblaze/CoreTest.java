@@ -6,6 +6,7 @@ import com.demoblaze.configs.EnvironmentConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.openqa.selenium.MutableCapabilities;
 
 import java.io.File;
 
@@ -42,6 +43,13 @@ public class CoreTest {
         Configuration.browser = EnvironmentConfig.getBrowser();
         Configuration.browserSize = "1920x1080";
         if (EnvironmentConfig.getHost().equals("MOON_CLOUD")) {
+            MutableCapabilities caps = new MutableCapabilities();
+            MutableCapabilities moonOptions = new MutableCapabilities();
+            moonOptions.setCapability("enableVideo", true);
+            moonOptions.setCapability("enableVNC", true);
+            moonOptions.setCapability("name", "MyCoolTest");
+            caps.setCapability("moon:options", moonOptions);
+            Configuration.browserCapabilities = caps;
             Configuration.remote = EnvironmentConfig.getRemoteURL();
         }
     }
