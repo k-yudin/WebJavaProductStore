@@ -43,13 +43,6 @@ public class CoreTest {
         Configuration.browser = EnvironmentConfig.getBrowser();
         Configuration.browserSize = "1920x1080";
         if (EnvironmentConfig.getHost().equals("MOON_CLOUD")) {
-            MutableCapabilities caps = new MutableCapabilities();
-            MutableCapabilities moonOptions = new MutableCapabilities();
-            moonOptions.setCapability("enableVideo", true);
-            moonOptions.setCapability("enableVNC", true);
-            moonOptions.setCapability("name", "MyCoolTest");
-            caps.setCapability("moon:options", moonOptions);
-            Configuration.browserCapabilities = caps;
             Configuration.remote = EnvironmentConfig.getRemoteURL();
         }
     }
