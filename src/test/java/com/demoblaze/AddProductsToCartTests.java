@@ -9,12 +9,14 @@ import org.junit.jupiter.api.Test;
 
 import static com.demoblaze.CoreTest.FEATURE_ADD_PRODUCT_SHOPPING_CART;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import com.automation.remarks.junit5.Video;
 
 @Feature(FEATURE_ADD_PRODUCT_SHOPPING_CART)
 public class AddProductsToCartTests extends CoreTest {
 
     @DisplayName("User adds Sony product to the shopping cart")
     @Test
+    @Video
     public void testAddSonyLaptopToCart() {
         NavigationUI navigationUI = new NavigationUI();
 
@@ -34,6 +36,7 @@ public class AddProductsToCartTests extends CoreTest {
 
     @DisplayName("User adds Dell product to the shopping cart")
     @Test
+    @Video
     public void testAddDellLaptopToCart() {
         NavigationUI navigationUI = new NavigationUI();
 

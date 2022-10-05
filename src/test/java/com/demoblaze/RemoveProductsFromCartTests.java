@@ -8,12 +8,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.demoblaze.CoreTest.FEATURE_REMOVE_PRODUCT_SHOPPING_CART;
+import com.automation.remarks.junit5.Video;
 
 @Feature(FEATURE_REMOVE_PRODUCT_SHOPPING_CART)
 public class RemoveProductsFromCartTests extends CoreTest {
 
     @DisplayName("User removes a product from the shopping cart")
     @Test
+    @Video
     public void testRemoveProductFromCart() {
         NavigationUI navigationUI = new NavigationUI();
 

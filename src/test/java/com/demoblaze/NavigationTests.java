@@ -7,12 +7,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.demoblaze.CoreTest.FEATURE_CATEGORIES_NAVIGATION;
+import com.automation.remarks.junit5.Video;
 
 @Feature(FEATURE_CATEGORIES_NAVIGATION)
 public class NavigationTests extends CoreTest{
 
     @DisplayName("User navigates through product categories")
     @Test
+    @Video
     public void testUserCategoryNavigation() {
         NavigationUI navigationUI = new NavigationUI();
         ProductPageObject products = new ProductPageObject();
