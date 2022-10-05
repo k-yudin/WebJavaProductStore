@@ -6,7 +6,6 @@ import com.demoblaze.configs.EnvironmentConfig;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.MutableCapabilities;
 
 import java.io.File;
 

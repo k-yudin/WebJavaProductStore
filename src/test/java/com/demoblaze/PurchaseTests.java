@@ -11,12 +11,15 @@ import org.junit.jupiter.api.Test;
 
 import static com.demoblaze.CoreTest.FEATURE_PLACE_ORDER;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import com.automation.remarks.junit5.Video;
+
 
 @Feature(FEATURE_PLACE_ORDER)
 public class PurchaseTests extends CoreTest {
 
     @DisplayName("User creates the order, order and total price are logged")
     @Test
+    @Video
     public void testCreateOrder() {
         NavigationUI navigationUI = new NavigationUI();
 
