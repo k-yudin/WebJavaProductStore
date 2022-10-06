@@ -35,6 +35,7 @@ public class CoreTest {
     protected static void setupAllureReports() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
+                .savePageSource(false)
         );
     }
 
